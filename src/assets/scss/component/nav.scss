@@ -1,0 +1,10 @@
+/*
+*   create by xiaofeng.yao
+*   time 2017.06.14
+*   component nav
+*/
+.MoBik-nav{
+    .ant-menu-horizontal > .ant-menu-item > a, .ant-menu-horizontal > .ant-menu-submenu > a{
+        display:inline-block;
+    }
+}

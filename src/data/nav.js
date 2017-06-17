@@ -1,0 +1,45 @@
+// 导航路由数据
+export default [
+    { 
+        id:101,
+        icon:'',
+        name:'Money Books',
+        link:'/'
+    },
+    { 
+        id:102,
+        icon:'home',
+        name:'home', 
+        link:'/home' 
+    },
+    { 
+        id:103,
+        icon:'down',
+        name:'Topics', 
+        link:'/topics',
+        list:[
+            {
+                id:1031,
+                icon:'user',
+                name:'rendering', 
+                link:'/topics/rendering'
+            },{
+                id:1032,
+                icon:'user',
+                name:'components',
+                link:'/topics/components'
+            },{
+                id:1033,
+                icon:'user',
+                name:'props-v-state',
+                link:'/topics/props-v-state'
+            }
+        ]
+    },
+    { 
+        id:104,
+        icon:'exclamation-circle',
+        name:'404', 
+        link:'/404' 
+    },
+];
