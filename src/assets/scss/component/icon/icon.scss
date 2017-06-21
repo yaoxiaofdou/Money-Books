@@ -1,0 +1,29 @@
+.iconDetail{
+    background-color:#fff;
+    padding: 15px;
+    border: 1px dashed #eee;
+    h1{
+        font-size: 28px;
+        color:#1DA57A;
+    }
+    .iconDetail_user{
+        font-size: 12px;
+        color: #ccc;
+        padding:5px 0;
+    }
+    .iconDetail__content{
+        padding: 30px;
+        border-top: 1px dashed #eee;
+        border-bottom: 1px dashed #eee;
+    }
+}
+.IListDetail_Icon{
+    display:inline-block;
+    margin:10px 0 0 10px;
+    p{
+        text-align: center;
+        i{
+            font-size:50px;
+        }
+    }
+}

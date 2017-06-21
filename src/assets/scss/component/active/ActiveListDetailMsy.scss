@@ -1,0 +1,43 @@
+.comment {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    min-height: 50px;
+    position:relative;
+}
+.comment .comment-user {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+.comment .comment-msg{
+    width: 84%;
+    word-wrap: break-word;
+    text-align: left;
+}
+.comment b{
+    position: absolute;
+    bottom: 5px;
+    right: 4px;
+}
+.comment .comment-delete{
+    position: absolute;
+    top: 5px;
+    right: 4px;
+    cursor:pointer;
+    display:none;
+}
+.comment:hover .comment-delete{
+    display:block;
+}
+.comment span {
+    color: #00a3cf;
+    font-style: italic;
+}
+.comment p {
+    margin: 0;
+}

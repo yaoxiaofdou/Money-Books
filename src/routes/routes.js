@@ -2,6 +2,7 @@ import React,{ Component } from 'react';
 import {
   BrowserRouter as Router,
   Route,
+  Switch,
   Link
 } from 'react-router-dom';
 
@@ -12,6 +13,9 @@ import NavComponent from '../component/nav/nav.js';
 
 // home 视图页
 import HomeView from '../views/home.js';
+
+// user 视图页
+import User from '../views/user.js';
 
 // 欢迎
 import WelcomeView from '../component/Welcome.js';
@@ -69,12 +73,13 @@ class MyRoutes extends Component {
                 
                 <Content style={{ padding: '0  50px',marginTop: 64 }}>
                     <Row>
-
-                        <Route exact path="/" component={WelcomeView}/>
-                        <Route path="/home" component={HomeView}/>
-                        <Route path="/topics" component={Topics}/>
-                        <Route path="/404" component={FourZeroFourView}/>
-
+                        <Switch>
+                            <Route exact path="/" component={WelcomeView}/>
+                            <Route path="/home" component={HomeView}/>
+                            <Route path="/topics" component={Topics}/>
+                            <Route path="/user" component={User}/>
+                            <Route component={FourZeroFourView}/>
+                        </Switch>
                     </Row>
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>

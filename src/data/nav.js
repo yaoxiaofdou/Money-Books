@@ -11,35 +11,34 @@ export default [
         icon:'home',
         name:'home', 
         link:'/home' 
+    },{ 
+        id:103,
+        icon:'user',
+        name:'user', 
+        link:'/user'
     },
     { 
-        id:103,
+        id:104,
         icon:'down',
         name:'Topics', 
         link:'/topics',
         list:[
             {
-                id:1031,
+                id:1041,
                 icon:'user',
                 name:'rendering', 
                 link:'/topics/rendering'
             },{
-                id:1032,
+                id:1042,
                 icon:'user',
                 name:'components',
                 link:'/topics/components'
             },{
-                id:1033,
+                id:1043,
                 icon:'user',
                 name:'props-v-state',
                 link:'/topics/props-v-state'
             }
         ]
-    },
-    { 
-        id:104,
-        icon:'exclamation-circle',
-        name:'404', 
-        link:'/404' 
     },
 ];

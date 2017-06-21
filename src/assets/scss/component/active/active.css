@@ -1,0 +1,19 @@
+.activeDetail {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px dashed #eee; }
+  .activeDetail h1 {
+    font-size: 28px;
+    color: #1DA57A; }
+  .activeDetail .iconDetail_user {
+    font-size: 12px;
+    color: #ccc;
+    padding: 5px 0; }
+  .activeDetail .iconDetail_content {
+    padding: 30px;
+    border-top: 1px dashed #eee;
+    border-bottom: 1px dashed #eee; }
+  .activeDetail .iconDetail_message {
+    margin: 0 auto; }

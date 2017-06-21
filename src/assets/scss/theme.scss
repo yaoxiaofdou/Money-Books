@@ -1,1 +1,6 @@
-@import './component/nav.scss';
+@import './component/nav/nav.scss';         // header导航
+@import './component/home/home.scss';       // home 各样式
+@import './component/icon/icon.scss';       // icon 界面样式
+@import './component/active/active.scss';   // active 界面样式
+@import './component/active/ActiveListDetailMsy.scss'; // active msg 界面样式
+@import './component/active/ActiveListDetailForm.scss'; // active msg form 界面样式

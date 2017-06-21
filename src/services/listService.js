@@ -1,154 +1,202 @@
-// import xhr from './xhr/'
-// /**
-//  * 对应后端的 /msg/* 所有 API
-//  */
-// class MsgService {
-//   /**
-//    * 取 msg（命名为 fetch 而非 get 主要是因为是远程操作）
-//    * @param  {String} options.author   作者名
-//    * @param  {Number} options.pageIdx  目标页码（默认是第 1 页）
-//    * @param  {Number} options.quantity 单页请求 msg 的数量（默认每页显示 10 条）
-//    * @param  {Number} options.msgId
-//    * @return {Promise}
-//    */
-//   fetch ({ author = '', pageIdx = 1, quantity = 10, msgId } = {}) {
-//     let url = '/msg/'
-    
-//     if (msgId) {
-//       url += msgId
-//     } else {
-//       url = `${url}?author=${author}&pageIdx=${pageIdx}&quantity=${quantity}`
-//     }
+// 引入wilddog
+import * as wilddog from 'wilddog';
 
-//     return xhr({ url })
-//   }
+const wilddogRef = ()=>{
+    const config = {
+        syncURL: "https://mbs.wilddogio.com"
+    };
+    wilddog.initializeApp(config);
+    const ref = wilddog.sync().ref();
+    return ref
+}
 
-//   /**
-//    * 新增 msg
-//    * @param  {Object} msgBody { title:{String}, content:{String} }
-//    * @return {Promise}
-//    */
-//   add (msgBody) {
-//     return xhr({
-//       method: 'post',
-//       url: '/msg',
-//       body: msgBody
-//     })
-//   }
-
-//   /**
-//    * 修改 msg
-//    * @param  {Object} msgBody { title:{String}, content:{String} }
-//    * @return {Promise}
-//    */
-//   mod (msgBody) {
-//     let msgId = msgBody.id
-//     delete msgBody.msgId
-
-//     return xhr({
-//       method: 'put',
-//       url: `/msg/${msgId}`,
-//       body: msgBody
-//     })
-//   }
-
-//   /**
-//    * 删除 msg
-//    * @param  {Number} msgId
-//    * @return {Promise}
-//    */
-//   del (msgId) {
-//     return xhr({
-//       method: 'delete',
-//       url: `/msg/${msgId}`
-//     })
-//   }
-
-// }
-
-// // 实例化后再导出
-// export default new MsgService()
-
-
-// 模拟列表数据
-const listData = [
+// 模拟icon数据
+const iconData = [
         {
-            id:'1024001',
-            title:'我爱我家，我爱学习！',
-            content:'这是一篇关于爱的故事。。。',
+            id:'I1024001',
+            title:'医疗类icon',
+            summary:'突发灵感创作的一组图标...',
+            iconlist:[
+                {
+                    id:'I10240010001',
+                    name:'点滴',
+                    icon:'icon-yiliao2'
+                },{
+                    id:'I10240010002',
+                    name:'健康医疗',
+                    icon:'icon-icon-test'
+                },{
+                    id:'I10240010003',
+                    name:'听诊器',
+                    icon:'icon-73316'
+                },{
+                    id:'I10240010004',
+                    name:'胶囊',
+                    icon:'icon-yiliao1'
+                },{
+                    id:'I10240010005',
+                    name:'桃心医疗',
+                    icon:'icon-yiliao'
+                }
+            ],
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024002',
-            title:'我叫饶聪聪！',
-            content:'这是一篇关于我叫饶聪聪的故事。。。',
+            id:'I1024002',
+            title:'通用类icon-1',
+            summary:'突发灵感创作的一组图标...',
+            iconlist:[
+                {
+                    id:'I10240020001',
+                    name:'001',
+                    icon:'icon-iconfont-tongyong' 
+                },{
+                    id:'I10240020002',
+                    name:'002',
+                    icon:'icon-tongyong-fenchengtubiao' 
+                },{
+                    id:'I10240020003',
+                    name:'003',
+                    icon:'icon-currency' 
+                },{
+                    id:'I10240020004',
+                    name:'004',
+                    icon:'icon-xiaoyijianyi-tongyongtubiao' 
+                },{
+                    id:'I10240020005',
+                    name:'005',
+                    icon:'icon-yewuchanpinxiantongyongtubiao' 
+                }
+            ],
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024003',
-            title:'我爱跟我喝酒！',
-            content:'这是一篇关于我爱跟我喝酒的故事。。。',
+            id:'I1024003',
+            title:'科技类icon',
+            summary:'突发灵感创作的一组图标...',
+            iconlist:[
+                {
+                    id:'I10240030001',
+                    name:'001',
+                    icon:'icon-keji3' 
+                },{
+                    id:'I10240030002',
+                    name:'002',
+                    icon:'icon-keji2' 
+                },{
+                    id:'I10240030003',
+                    name:'003',
+                    icon:'icon-keji1' 
+                },{
+                    id:'I10240030004',
+                    name:'004',
+                    icon:'icon-keji' 
+                },{
+                    id:'I10240030005',
+                    name:'005',
+                    icon:'icon-iconfontkeji1' 
+                }
+            ],
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024004',
-            title:'是等等等手术室！',
-            content:'这是一篇关于是等等等手术室的故事。。。',
+            id:'I1024004',
+            title:'通用类icon-2',
+            summary:'突发灵感创作的一组图标...',
+            iconlist:[
+                {
+                    id:'I10240040001',
+                    name:'001',
+                    icon:'icon-iconfont-tongyong' 
+                },{
+                    id:'I10240040002',
+                    name:'002',
+                    icon:'icon-tongyong-fenchengtubiao' 
+                },{
+                    id:'I10240040003',
+                    name:'003',
+                    icon:'icon-currency' 
+                },{
+                    id:'I10240040004',
+                    name:'004',
+                    icon:'icon-xiaoyijianyi-tongyongtubiao' 
+                },{
+                    id:'I10240040005',
+                    name:'005',
+                    icon:'icon-yewuchanpinxiantongyongtubiao' 
+                }
+            ],
             time:'2017.06.15',
             user:'xiaofeng.yao'
-        },{
-            id:'1024005',
+        }
+    ];
+
+// 模拟文章数据
+const activeData = [
+        {
+            id:'A1024005',
             title:'11111111！',
             content:'这是一篇关于11111111的故事。。。',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024006',
+            id:'A1024006',
             title:'22222222！',
             content:'这是一篇关于22222222的故事。。。',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024007',
+            id:'A1024007',
             title:'3333333！',
             content:'这是一篇关于33333333的故事。。。',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024008',
+            id:'A1024008',
             title:'4444444！',
             content:'这是一篇关于4444444的故事。。。',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
-            id:'1024009',
+            id:'A1024009',
             title:'55555555！',
             content:'这是一篇关于55555555的故事。。。',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },
-    ];
+];
 
 class ListService {
     
     /**
-    * 获取 列表 数据
+    * 获取 icon active psd 列表 数据
     */
-    get () {
-        return listData
+    getIcon () {
+        return iconData
     }
-
+    getActive () {
+        return activeData
+    }
     /**
     * 获取 详情 数据
     * @param  {Number} Listid
     */
-    getDetail (id) {
+    getDetail (cls,id) {
         let detail = {};
-        listData.map((item,index)=>{
-            if(item.id === id){
-                detail = item;
-            }
-        })
+        
+        if(cls === 'icon'){
+            iconData.map((item,index)=>{
+                if(item.id === id){
+                    detail = item;
+                }
+            })
+        }else if(cls === 'active'){
+            activeData.map((item,index)=>{
+                if(item.id === id){
+                    detail = item;
+                }
+            })
+        }
         return detail
     }
 
@@ -157,7 +205,7 @@ class ListService {
     * @param  {Number} Listid
     */
     setDetail (id,content) {
-        listData.map((item,index)=>{
+        iconData.map((item,index)=>{
             if(item.id === id){
                 item.content = content;
             }
