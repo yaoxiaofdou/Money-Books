@@ -1,0 +1,19 @@
+@import '../../variable.scss';                    // 变量
+
+/*************************************
+*    create by xiaofeng.yao
+*    time 2017.06.27
+*    component user
+*************************************/
+
+.userMenu{
+    border-right: 1px solid #e9e9e9;
+    box-shadow: 1px 1px 20px 1px #eee !important;
+    border-left: 1px solid #f3f3f3;
+}
+
+.userController{
+    .ant-layout{
+        background-color:#fff;
+    }
+}

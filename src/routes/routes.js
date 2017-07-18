@@ -16,12 +16,16 @@ import HomeView from '../views/home.js';
 
 // user 视图页
 import User from '../views/user.js';
+import PrivateRoute from '../component/login/PrivateRoute.js';
+
+// login
+import Login from '../component/login/login.js';
 
 // 欢迎
 import WelcomeView from '../component/Welcome.js';
 
 // 404
-import FourZeroFourView from '../component/404.js';
+// import FourZeroFourView from '../component/404.js';
 
 // antd
 import { Row, Layout } from 'antd';
@@ -62,12 +66,14 @@ const Topics = ({ match }) => (
   </div>
 )
 
+const Protected = () => <h3>Protected</h3>
+
 class MyRoutes extends Component {
   
     render() {
         return (
             <Router>
-              <Layout className="layout">
+              <Layout className="layout" style={{ backgroundColor:'#fff' }}>
 
                 <NavComponent data={this.props.navData}/>
                 
@@ -77,12 +83,15 @@ class MyRoutes extends Component {
                             <Route exact path="/" component={WelcomeView}/>
                             <Route path="/home" component={HomeView}/>
                             <Route path="/topics" component={Topics}/>
-                            <Route path="/user" component={User}/>
-                            <Route component={FourZeroFourView}/>
+                            {/* 登陆判断 */}
+                            <PrivateRoute path="/user" component={User}/>
+                            {/*<Route path="/user" component={User}/>*/}
+                            <Route path="/login" component={Login}/>
+                            <Route component={WelcomeView}/>
                         </Switch>
                     </Row>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>
+                <Footer style={{ width:'100%',position:'fixed',bottom:'0',textAlign: 'center' }}>
                   create by xiaofeng.yao ~ 2017.06.14
                 </Footer>
               </Layout>

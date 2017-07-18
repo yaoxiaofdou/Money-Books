@@ -5,3 +5,10 @@
 */
 .MoBik-nav .ant-menu-horizontal > .ant-menu-item > a, .MoBik-nav .ant-menu-horizontal > .ant-menu-submenu > a {
   display: inline-block; }
+
+.MoBik-nav .MoBik-nav__signOut {
+  position: absolute;
+  right: 5%;
+  top: 14px; }
+  .MoBik-nav .MoBik-nav__signOut i {
+    font-size: 24px; }

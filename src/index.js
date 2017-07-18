@@ -13,7 +13,7 @@ class App extends Component{
     render(){
         return(
           <div>
-            <MyRoutes navData={navData} />
+            <MyRoutes navData={navData}/>
           </div>
         )
     }

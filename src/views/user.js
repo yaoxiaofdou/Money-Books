@@ -8,9 +8,23 @@ import {
 // 动画
 import QueueAnim from 'rc-queue-anim';
 
-import { Menu, Icon, Breadcrumb } from 'antd';
+import { Layout, Breadcrumb } from 'antd';
 
-const SubMenu = Menu.SubMenu;
+// menu
+import UserMenu from '../component/user-menu/userMenu.js';
+
+// user welcome
+import UserWelcome from '../component/userWelcome/userWelcome';
+// user newicon
+import NewIcon from '../component/newIcon/newIcon';
+// user NewArticle
+import NewArticle from '../component/newArticle/newArticle';
+// user NewPsd
+import NewPsd from '../component/newPsd/newPsd';
+// edit Active router
+import EditActiveRouter from '../component/editActive/editActiveRouter.js';
+
+const { Header, Footer, Sider, Content } = Layout;
 
 class User extends Component {
     static propTypes = {
@@ -20,93 +34,90 @@ class User extends Component {
     constructor(){
         super()
         this.state = {
-            current: '1',
-            openKeys: [],
             Breadcrumb:[],
         }
+    }
+
+    componentWillMount(){
+        // 页面加载的时候设置一次面包屑导航
+        this.handleUrlSet();
+    }
+
+    // 根据路由信息，来设置 面包屑导航
+    handleUrlSet(urlstr){
+        let str = urlstr || this.props.location.pathname;
+        let url = str.substr(str.indexOf('er')+3);
+        let arr = url.split('/');
+        this.setState({
+            Breadcrumb : arr
+        });
     }
 
     // 根路由组件中监听location.pathname的属性
     componentWillReceiveProps(nextProps){
         let str = nextProps.location.pathname;
-        let urlId = str.substr(str.indexOf('me')+3);
-        // 新增数据
-        this.setState({
-            Breadcrumb:[urlId]
-        });
-    }
-
-    handleClick = (e) => {
-        console.log('Clicked: ', e);
-        this.setState({ current: e.key });
-    }
-
-    onOpenChange = (openKeys) => {
-        const state = this.state;
-        const latestOpenKey = openKeys.find(key => !(state.openKeys.indexOf(key) > -1));
-        const latestCloseKey = state.openKeys.find(key => !(openKeys.indexOf(key) > -1));
-
-        let nextOpenKeys = [];
-        if (latestOpenKey) {
-        nextOpenKeys = this.getAncestorKeys(latestOpenKey).concat(latestOpenKey);
-        }
-        if (latestCloseKey) {
-        nextOpenKeys = this.getAncestorKeys(latestCloseKey);
-        }
-        this.setState({ openKeys: nextOpenKeys });
-    }
-
-    getAncestorKeys = (key) => {
-        const map = {
-        sub3: ['sub2'],
-        };
-        return map[key] || [];
+        this.handleUrlSet(str);
     }
 
     render() {
         return (
-            <QueueAnim type={['left']}>
-                <Breadcrumb style={{ margin: '12px 0' }} key="a">
-                    <Breadcrumb.Item>
-                        <Link to="/user">
-                        user
-                        </Link>
-                    </Breadcrumb.Item>
-                    {
-                        this.state.Breadcrumb.map((item,index)=>{
-                            return(
-                                <Breadcrumb.Item key={index} >
-                                    <Link to={`/user/${item}`}>
-                                    { item }
+            <div className="userController">
+                <Layout>
+                    <QueueAnim type={['left']}>
+                        <div className="userblock-Breadcrumb" key="a">
+                            <Breadcrumb style={{ margin: '12px 0' }} key="a">
+                                <Breadcrumb.Item>
+                                    <Link to="/user">
+                                    user
                                     </Link>
                                 </Breadcrumb.Item>
-                            )
-                        })
-                    }
-                </Breadcrumb>
-
-                <Menu
-                    mode="inline"
-                    openKeys={this.state.openKeys}
-                    selectedKeys={[this.state.current]}
-                    style={{ width: 180 }}
-                    onOpenChange={this.onOpenChange}
-                    onClick={this.handleClick}
-                    key="b"
-                >
-                    <SubMenu key="sub1" title={<span><Icon type="mail" /><span>发布新资源</span></span>}>
-                        <Menu.Item key="1">新 图标</Menu.Item>
-                        <Menu.Item key="3">新 设计图</Menu.Item>
-                        <Menu.Item key="2">新 文章</Menu.Item>
-                    </SubMenu>
-                    <SubMenu key="sub2" title={<span><Icon type="appstore" /><span>管理资源</span></span>}>
-                        <Menu.Item key="5">图标</Menu.Item>
-                        <Menu.Item key="6">设计图</Menu.Item>
-                        <Menu.Item key="7">文章</Menu.Item>
-                    </SubMenu>
-                </Menu>
-
-            </QueueAnim>
+                                {
+                                    this.state.Breadcrumb.map((item,index)=>{
+                                        {/* 最后一个 a 去除链接 ,判断下标+1等于数组长度就行 */}
+                                        if(this.state.Breadcrumb.length === (index+1)){
+                                            return(
+                                                <Breadcrumb.Item key={index} >
+                                                { item }
+                                                </Breadcrumb.Item>
+                                            )
+                                        }else{
+                                            return(
+                                                <Breadcrumb.Item key={index} >
+                                                    <Link to={`/user/${item}`}>
+                                                    { item }
+                                                    </Link>
+                                                </Breadcrumb.Item>
+                                            )
+                                        }
+                                    })
+                                }
+                            </Breadcrumb>
+                        </div>
+                    </QueueAnim>
+                    <QueueAnim type={['bottom']}>
+                        <Layout key="b" style={{ paddingBottom:'70px' }}>
+                            <Sider style={{ backgroundColor:'transparent' }}>
+                                <div className="userblock-nav">
+                                    <UserMenu />
+                                </div>
+                            </Sider>
+                            <Content style={{ overflow:'initial' }}>
+                                <div className="userblock-content">
+                                    <Route exact path="/user" component={UserWelcome}/>
+                                    {/*** new start ***/}
+                                    <Route path="/user/newIcon" component={NewIcon}/>
+                                    <Route path="/user/newArticle" component={NewArticle}/>
+                                    <Route path="/user/newPsd" component={NewPsd}/>
+                                    {/*** new end ***/}
+                                    {/*** edit start ***/}
+                                    <Route path="/user/editActive" component={EditActiveRouter}/>
+                                    {/*** edit end ***/}
+                                </div>
+                            </Content>
+                        </Layout>
+                    </QueueAnim>
+                </Layout>
+            </div>
         );
     }
 }

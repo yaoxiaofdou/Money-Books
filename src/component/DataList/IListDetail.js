@@ -63,7 +63,13 @@ class IListDetail extends Component {
             <div className="iconDetail">
                 <QueueAnim delay={200}>
                     <h1 key="a0">{this.state.item.title}</h1>
-                    <p className="iconDetail_user" key="a1"> {this.state.item.user} {this.state.item.time}</p>
+                    <div className="iconDetail_user" key="a1">
+                        <p> 
+                            <span>{this.state.item.time}</span>&nbsp;&nbsp;·&nbsp;&nbsp;
+                            <span>{this.state.item.user}</span>
+                        </p>
+                        <hr/>
+                    </div>
                 </QueueAnim>
 
                 

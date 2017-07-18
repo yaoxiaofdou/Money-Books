@@ -1,0 +1,26 @@
+@import '../../../variable.scss';                    // 变量
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.18
+*    component editActive
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/user/editActive/editActive.scss
+*************************************/
+
+.EditActiveList{
+    .EditActiveList__col{
+        .EditActiveList__card{
+            margin: 10px auto;
+            .EditActiveList__btn{
+                a{
+                    margin-left:10px;
+                }
+                .EditActiveList__btn--remove{
+                    color:#999;
+                }
+            }
+        }
+    }
+}
+

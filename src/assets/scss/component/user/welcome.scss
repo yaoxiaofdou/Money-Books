@@ -1,0 +1,49 @@
+@import '../../variable.scss';                    // 变量
+
+/*************************************
+*    create by xiaofeng.yao
+*    time 2017.06.28
+*    component user-welcome
+*************************************/
+
+.UserWel{
+    .UserWel_Li{
+        width: 30%;
+        max-width: 180px;
+        display: inline-block;
+        padding: 10px;
+        margin-right: 20px;
+        position:relative;
+        animation:userWelcomeAnima 20s infinite linear;
+
+        .UserWel__liLeft{
+            .UserWel__title{
+                font-size: 16px;
+                color:$b-color;
+            }
+            .UserWel__content{
+                font-size: 14px;
+                color:$a-color;
+            }
+        }
+        .UserWel__liIcon{
+            font-size: 32px;
+            position: absolute;
+            right:18%;
+            top:25%;
+            color:$a-color;
+        }
+    }
+    @keyframes userWelcomeAnima{
+        0%{
+            background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+            background-size: 30px 30px;
+            background-position:0 100px; 
+        }
+        100%{
+            background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+            background-size: 30px 30px;
+            background-position:0 1000px;
+        }
+    }
+}

@@ -3,7 +3,7 @@ import * as wilddog from 'wilddog';
 
 const wilddogRef = ()=>{
     const config = {
-        syncURL: "https://mbs.wilddogio.com"
+        syncURL: "https://mbscs.wilddogio.com"
     };
     wilddog.initializeApp(config);
     const ref = wilddog.sync().ref();
@@ -136,34 +136,70 @@ const activeData = [
         {
             id:'A1024005',
             title:'11111111！',
-            content:'这是一篇关于11111111的故事。。。',
+            content:'{"entityMap":{},"blocks":[{"key":"8ofc8","text":"一场惊心动魄的登陆","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
             id:'A1024006',
             title:'22222222！',
-            content:'这是一篇关于22222222的故事。。。',
+            content:'{"entityMap":{},"blocks":[{"key":"8ofc8","text":"一场惊心动魄的登陆","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
             id:'A1024007',
             title:'3333333！',
-            content:'这是一篇关于33333333的故事。。。',
+            content:'{"entityMap":{},"blocks":[{"key":"8ofc8","text":"一场惊心动魄的登陆","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
             id:'A1024008',
             title:'4444444！',
-            content:'这是一篇关于4444444的故事。。。',
+            content:'{"entityMap":{},"blocks":[{"key":"8ofc8","text":"一场惊心动魄的登陆","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },{
             id:'A1024009',
             title:'55555555！',
-            content:'这是一篇关于55555555的故事。。。',
+            content:'{"entityMap":{},"blocks":[{"key":"8ofc8","text":"一场惊心动魄的登陆","type":"unstyled","depth":0,"inlineStyleRanges":[],"entityRanges":[],"data":{}}]}',
             time:'2017.06.15',
             user:'xiaofeng.yao'
         },
+];
+// 模拟psd数据
+const psdData = [
+    {
+        id:'P1024001',
+        title:'医疗企业官网设计图',
+        summary:'用自我新颖的创意想法重构原有的不好看的医疗企业设计图',
+        time:'2017.06.26',
+        user:'xiaofeng.yao',
+        imgUrl:'/images/fabricWeb/fabricHome.jpg',
+        psdUrl:'/images/fabricWeb/fabricHome.psd'
+    },{
+        id:'P1024002',
+        title:'创意网站设计图',
+        summary:'用自我新颖的创意想法重构原有的不好看的创意网站设计图',
+        time:'2017.06.26',
+        imgUrl:'/images/fabricWeb/fabricHome.jpg',
+        psdUrl:'/images/fabricWeb/fabricHome.psd',
+        user:'xiaofeng.yao'
+    },{
+        id:'P1024003',
+        title:'唯美色调app设计图',
+        summary:'利用唯美色调绘制的app设计图',
+        time:'2017.06.26',
+        imgUrl:'/images/fabricWeb/fabricHome.jpg',
+        psdUrl:'/images/fabricWeb/fabricHome.psd',
+        user:'xiaofeng.yao'
+    },{
+        id:'P1024004',
+        title:'中国风古董拍卖行网站设计图',
+        summary:'中国风古董拍卖行网站设计图',
+        time:'2017.06.26',
+        imgUrl:'/images/fabricWeb/fabricHome.jpg',
+        psdUrl:'/images/fabricWeb/fabricHome.psd',
+        user:'xiaofeng.yao'
+    },
 ];
 
 class ListService {
@@ -176,6 +212,9 @@ class ListService {
     }
     getActive () {
         return activeData
+    }
+    getPsd () {
+        return psdData
     }
     /**
     * 获取 详情 数据
@@ -196,6 +235,12 @@ class ListService {
                     detail = item;
                 }
             })
+        }else if(cls === 'psd'){
+            psdData.map((item,index)=>{
+                if(item.id === id){
+                    detail = item;
+                }
+            })
         }
         return detail
     }
@@ -212,6 +257,14 @@ class ListService {
         })
     }
     
+    /**
+    * 创建新图标
+    * @param  { Object } icon 新图标对象
+    */
+    newIcon(icon){
+        console.log(icon)
+        
+    }
 
 }
 // 实例化后再导出

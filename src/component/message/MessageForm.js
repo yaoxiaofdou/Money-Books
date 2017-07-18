@@ -122,7 +122,7 @@ class MessageForm extends Component {
 
     render() {
         return (
-            <Form style={{ width:600,padding:'70px 15px' }}>
+            <Form>
                 <QueueAnim delay={200}>
                     <FormItem
                         {...formItemLayout}

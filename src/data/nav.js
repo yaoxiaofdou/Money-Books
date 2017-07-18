@@ -40,5 +40,5 @@ export default [
                 link:'/topics/props-v-state'
             }
         ]
-    },
+    }
 ];

@@ -1,3 +1,10 @@
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
 /*
 *   create by xiaofeng.yao
 *   time 2017.06.14
@@ -6,10 +13,23 @@
 .MoBik-nav .ant-menu-horizontal > .ant-menu-item > a, .MoBik-nav .ant-menu-horizontal > .ant-menu-submenu > a {
   display: inline-block; }
 
-.homeNav-li {
+.MoBik-nav .MoBik-nav__signOut {
+  position: absolute;
+  right: 5%;
+  top: 14px; }
+  .MoBik-nav .MoBik-nav__signOut i {
+    font-size: 24px; }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+.homeNav-panel .homeNav-li {
   width: 250px;
   height: 250px;
-  background-color: #fff;
   transition: 0.5s;
   text-align: center;
   position: relative;
@@ -17,29 +37,76 @@
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 0 auto 20px; }
-  .homeNav-li i {
+  margin: 0 auto 20px;
+  box-shadow: 1px 1px 9px -3px #AB8ECD; }
+  .homeNav-panel .homeNav-li i {
     display: inline-block;
     line-height: 250px;
-    font-size: 16px; }
-  .homeNav-li:hover {
-    box-shadow: -4px 4px 20px -6px #777; }
+    font-size: 24px; }
+  .homeNav-panel .homeNav-li:hover {
+    animation: homeNavAnima 10s infinite linear; }
 
+@keyframes homeNavAnima {
+  0% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 0; }
+  100% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 1000px; } }
+
+.welcome {
+  padding: 50px 30px; }
+  .welcome h2 {
+    font-size: 24px;
+    line-height: 80px; }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
 .iconDetail {
-  background-color: #fff;
   padding: 15px;
-  border: 1px dashed #eee; }
+  text-align: center; }
   .iconDetail h1 {
-    font-size: 28px;
-    color: #1DA57A; }
+    font-size: 32px;
+    color: #79589F;
+    font-family: "BentonSans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    margin: 30px 0 12px 0; }
   .iconDetail .iconDetail_user {
-    font-size: 12px;
-    color: #ccc;
-    padding: 5px 0; }
+    position: relative; }
+    .iconDetail .iconDetail_user p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0 8px 0 10px;
+      position: relative;
+      z-index: 2;
+      background: #fff; }
+      .iconDetail .iconDetail_user p span:nth-child(2) {
+        font-size: 14px;
+        color: #79589F; }
+    .iconDetail .iconDetail_user hr {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
   .iconDetail .iconDetail__content {
-    padding: 30px;
-    border-top: 1px dashed #eee;
-    border-bottom: 1px dashed #eee; }
+    padding: 20px 30px 100px 30px;
+    color: rgba(89, 105, 129, 0.8); }
 
 .IListDetail_Icon {
   display: inline-block;
@@ -49,25 +116,264 @@
     .IListDetail_Icon p i {
       font-size: 50px; }
 
+.iconNav {
+  padding: 30px 0; }
+  .iconNav .iconNav__li {
+    text-align: center; }
+    .iconNav .iconNav__li .ant-card {
+      display: inline-block;
+      width: 300px;
+      height: 132px;
+      background: #F9F9FB;
+      box-shadow: 6px 6px 20px 2px #eee; }
+      .iconNav .iconNav__li .ant-card .ant-card-head-title {
+        color: #79589F; }
+      .iconNav .iconNav__li .ant-card .ant-card-body p {
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical; }
+      .iconNav .iconNav__li .ant-card:hover {
+        box-shadow: 4px 4px 15px 2px #79589F;
+        animation: msgAnima 20s infinite linear; }
+
+@keyframes msgAnima {
+  0% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 100px; }
+  100% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 1000px; } }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
 .activeDetail {
   max-width: 1200px;
   margin: auto;
   background-color: #fff;
   padding: 15px;
-  border: 1px dashed #eee; }
+  border: 1px dashed #eee;
+  text-align: center; }
   .activeDetail h1 {
-    font-size: 28px;
-    color: #1DA57A; }
+    font-size: 32px;
+    color: #79589F;
+    font-family: "BentonSans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    margin: 30px 0 12px 0; }
   .activeDetail .iconDetail_user {
-    font-size: 12px;
-    color: #ccc;
-    padding: 5px 0; }
+    position: relative; }
+    .activeDetail .iconDetail_user p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0 8px 0 10px;
+      position: relative;
+      z-index: 2;
+      background: #fff; }
+      .activeDetail .iconDetail_user p span:nth-child(2) {
+        font-size: 14px;
+        color: #79589F; }
+    .activeDetail .iconDetail_user hr {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
   .activeDetail .iconDetail_content {
-    padding: 30px;
-    border-top: 1px dashed #eee;
-    border-bottom: 1px dashed #eee; }
+    padding: 80px 30px; }
   .activeDetail .iconDetail_message {
     margin: 0 auto; }
+
+.active-list {
+  position: relative; }
+  .active-list .active-list__leftBG {
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -80px;
+    z-index: 1;
+    width: 300px;
+    height: 348px; }
+  .active-list .active-list__maskBG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 8000px 200px white; }
+  .active-list .active-list__rightBG {
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    z-index: 1;
+    width: 300px;
+    height: 364px; }
+  .active-list .active-list__li {
+    position: relative;
+    z-index: 3;
+    padding: 0 6%;
+    background-color: #fff; }
+    .active-list .active-list__li:hover {
+      animation: activeListAnima 10s infinite linear; }
+    .active-list .active-list__li h1 {
+      font-size: 32px;
+      color: #79589F;
+      font-family: "BentonSans", "Helvetica Neue", sans-serif;
+      font-weight: normal;
+      margin: 30px 0 12px 0; }
+    .active-list .active-list__li .active-list__liuser p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block; }
+      .active-list .active-list__li .active-list__liuser p .active-list__liICO {
+        background-color: #AB8ECD;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 5px;
+        margin-right: 5px; }
+    .active-list .active-list__li .active-list__licontent {
+      padding: 40px 2px;
+      color: rgba(89, 105, 129, 0.8);
+      font-size: 14px; }
+    .active-list .active-list__li .active-list__liBtn {
+      margin: 30px 0; }
+    .active-list .active-list__li hr {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
+
+@keyframes activeListAnima {
+  0% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 0; }
+  100% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 1000px 0; } }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+/*
+*   create by xiaofeng.yao
+*   time 2017.06.27
+*   component psd
+*/
+.psd-list .psd-li {
+  text-align: center; }
+  .psd-list .psd-li .ant-card {
+    display: inline-block;
+    width: 300px;
+    height: 132px;
+    box-shadow: 0 0 10px 1px #eee;
+    animation: psdlistAnima 20s infinite linear; }
+    .psd-list .psd-li .ant-card .ant-card-head {
+      padding: 0 10px; }
+      .psd-list .psd-li .ant-card .ant-card-head h3 {
+        text-align: left; }
+    .psd-list .psd-li .ant-card .ant-card-body p {
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; }
+    .psd-list .psd-li .ant-card:hover {
+      box-shadow: 0 0 30px 1px #79589F; }
+
+@keyframes psdlistAnima {
+  0% {
+    background: linear-gradient(135deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 100px; }
+  100% {
+    background: linear-gradient(135deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 1000px; } }
+
+.psdDetail {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  padding: 15px;
+  border-top: 1px dashed #eee;
+  text-align: center; }
+  .psdDetail h1 {
+    font-size: 32px;
+    color: #79589F;
+    font-family: "BentonSans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    margin: 30px 0 12px 0; }
+  .psdDetail .psdDetail_user {
+    position: relative; }
+    .psdDetail .psdDetail_user p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0 8px 0 10px;
+      position: relative;
+      z-index: 2;
+      background: #fff; }
+      .psdDetail .psdDetail_user p span:nth-child(2) {
+        font-size: 14px;
+        color: #79589F; }
+    .psdDetail .psdDetail_user hr {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
+  .psdDetail .psdDetail_content {
+    padding: 30px; }
+    .psdDetail .psdDetail_content img {
+      width: 100%; }
+    .psdDetail .psdDetail_content .psdDetail_content__download {
+      margin: 50px 0 0;
+      padding: 20px;
+      border-top: 1px solid #79589F;
+      text-align: left; }
 
 .comment {
   display: -webkit-box;
@@ -153,3 +459,237 @@
   color: #fff;
   outline: none;
   cursor: pointer; }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component msg
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/msg/msg.scss
+*************************************/
+.iconDetail_message {
+  animation: msgAnima 20s infinite linear;
+  padding-bottom: 50px; }
+  .iconDetail_message .ant-form {
+    width: 700px;
+    padding: 70px 0 70px 10px; }
+  .iconDetail_message .comment {
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 10px 15px 40px;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .iconDetail_message .comment .comment-user {
+      width: 60px;
+      text-align: left; }
+
+@keyframes msgAnima {
+  0% {
+    background: linear-gradient(45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 100px; }
+  100% {
+    background: linear-gradient(45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 1000px; } }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+/*************************************
+*    create by xiaofeng.yao
+*    time 2017.06.27
+*    component user
+*************************************/
+.userMenu {
+  border-right: 1px solid #e9e9e9;
+  box-shadow: 1px 1px 20px 1px #eee !important;
+  border-left: 1px solid #f3f3f3; }
+
+.userController .ant-layout {
+  background-color: #fff; }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+/*************************************
+*    create by xiaofeng.yao
+*    time 2017.06.28
+*    component user-welcome
+*************************************/
+.UserWel .UserWel_Li {
+  width: 30%;
+  max-width: 180px;
+  display: inline-block;
+  padding: 10px;
+  margin-right: 20px;
+  position: relative;
+  animation: userWelcomeAnima 20s infinite linear; }
+  .UserWel .UserWel_Li .UserWel__liLeft .UserWel__title {
+    font-size: 16px;
+    color: #AB8ECD; }
+  .UserWel .UserWel_Li .UserWel__liLeft .UserWel__content {
+    font-size: 14px;
+    color: #79589F; }
+  .UserWel .UserWel_Li .UserWel__liIcon {
+    font-size: 32px;
+    position: absolute;
+    right: 18%;
+    top: 25%;
+    color: #79589F; }
+
+@keyframes userWelcomeAnima {
+  0% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 100px; }
+  100% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 1000px; } }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.08
+*    component newicon
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/user/newicon/newicon.scss
+*************************************/
+.NewIcon_div {
+  max-width: 500px;
+  text-align: center;
+  padding: 0 0 100px 0; }
+  .NewIcon_div .NewIcon_class {
+    display: inline-block;
+    width: 180px;
+    margin-right: 40px;
+    height: 90px;
+    position: relative;
+    top: 0;
+    overflow: hidden; }
+    .NewIcon_div .NewIcon_class .NewIcon_class_mul {
+      padding-top: 10px;
+      width: 100%;
+      height: 106px;
+      position: relative;
+      transition: 0.4s; }
+      .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__select .iconfont {
+        position: relative;
+        font-size: 34px;
+        top: 6px; }
+      .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__select .ant-select {
+        width: 140px; }
+      .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__newclass {
+        margin-top: 40px; }
+        .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__newclass .iconfont {
+          position: relative;
+          font-size: 32px;
+          top: 6px; }
+        .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__newclass .ant-input {
+          width: 140px; }
+        .NewIcon_div .NewIcon_class .NewIcon_class_mul .NewIcon_class__newclass .ant-btn {
+          margin-top: 20px; }
+    .NewIcon_div .NewIcon_class .NewIcon_class_mul--new {
+      transform: translateY(-90px); }
+  .NewIcon_div .NewIcon_section {
+    margin: 15px 0;
+    padding: 15px 5px;
+    box-shadow: 0px 0px 4px 1px #69489c;
+    display: inline-block;
+    margin-bottom: 40px;
+    text-align: center; }
+    .NewIcon_div .NewIcon_section .NewIcon {
+      width: 150px;
+      height: 150px;
+      display: inline-block;
+      overflow: hidden;
+      animation: userNewIconAnima 10s infinite linear;
+      position: relative; }
+      .NewIcon_div .NewIcon_section .NewIcon .icon-shangchuan1 {
+        height: 40px;
+        font-size: 130px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto; }
+      .NewIcon_div .NewIcon_section .NewIcon .NewIcon__File {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        opacity: 0;
+        cursor: pointer; }
+      .NewIcon_div .NewIcon_section .NewIcon .NewIcon__Img {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff; }
+      .NewIcon_div .NewIcon_section .NewIcon .NewIcon__Img--hide {
+        opacity: 0; }
+      .NewIcon_div .NewIcon_section .NewIcon:hover .icon-shangchuan1 {
+        color: #79589F; }
+    .NewIcon_div .NewIcon_section .NewIcon__title {
+      width: 170px;
+      height: 30px;
+      position: relative; }
+      .NewIcon_div .NewIcon_section .NewIcon__title .NewIcon__title-txt {
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background-color: transparent; }
+        .NewIcon_div .NewIcon_section .NewIcon__title .NewIcon__title-txt:focus {
+          outline: 1px solid #79589F; }
+
+@keyframes userNewIconAnima {
+  0% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 100px; }
+  100% {
+    background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165, 0.2) 0, rgba(114, 76, 165, 0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165, 0.2) 0);
+    background-size: 30px 30px;
+    background-position: 0 1000px; } }
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.18
+*    component editActive
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/user/editActive/editActive.scss
+*************************************/
+.EditActiveList .EditActiveList__col .EditActiveList__card {
+  margin: 10px auto; }
+  .EditActiveList .EditActiveList__col .EditActiveList__card .EditActiveList__btn a {
+    margin-left: 10px; }
+  .EditActiveList .EditActiveList__col .EditActiveList__card .EditActiveList__btn .EditActiveList__btn--remove {
+    color: #999; }

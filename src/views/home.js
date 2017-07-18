@@ -18,6 +18,7 @@ import IconDataList from '../component/DataList/IconDataList.js';
 // 文章详情页
 import ActiveList from '../component/ActiveList/ActiveList.js';
 // PSD详情页
+import PSDList from '../component/PSDList/PSDList.js';
 
 class HomeView extends Component {
     static propTypes = {
@@ -56,7 +57,7 @@ class HomeView extends Component {
         return (
             <QueueAnim type={['right', 'left']}
                     ease={['easeOutQuart', 'easeInOutQuart']}>
-                <Breadcrumb style={{ margin: '12px 0' }} key="a">
+                <Breadcrumb style={{ margin: '12px 0',position:'relative',zIndex:'98' }} key="a">
                     <Breadcrumb.Item>
                         <Link to="/home">
                         home
@@ -93,6 +94,8 @@ class HomeView extends Component {
                 {/* 文章 */}
                 <Route path="/home/active" component={ActiveList}/>
                 
+                {/* psd */}
+                <Route path="/home/psd" component={PSDList}/>
                 
             </QueueAnim>
         );

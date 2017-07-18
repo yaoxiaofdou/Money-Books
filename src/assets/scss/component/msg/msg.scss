@@ -1,0 +1,38 @@
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component msg
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/msg/msg.scss
+*************************************/
+
+.iconDetail_message {
+    animation:msgAnima 20s infinite linear;
+    padding-bottom: 50px;
+    .ant-form{
+        width:700px;
+        padding: 70px 0 70px 10px;
+    }
+    .comment{
+        max-width: 800px;
+        margin: 5px auto;
+        padding: 10px 15px 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+        .comment-user{
+            width: 60px;
+            text-align: left;
+        }
+    }
+}
+@keyframes msgAnima{
+    0%{
+        background: linear-gradient(45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+        background-size: 30px 30px;
+        background-position:0 100px; 
+    }
+    100%{
+        background: linear-gradient(45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+        background-size: 30px 30px;
+        background-position:0 1000px;
+    }
+}

@@ -1,6 +1,15 @@
+@import 'variable.scss';                    // 变量
+
 @import './component/nav/nav.scss';         // header导航
 @import './component/home/home.scss';       // home 各样式
 @import './component/icon/icon.scss';       // icon 界面样式
 @import './component/active/active.scss';   // active 界面样式
+@import './component/psd/psd.scss';         // psd 界面样式
 @import './component/active/ActiveListDetailMsy.scss'; // active msg 界面样式
 @import './component/active/ActiveListDetailForm.scss'; // active msg form 界面样式
+@import './component/msg/msg.scss';         // msg 
+// user
+@import './component/user/user.scss';       // user
+@import './component/user/welcome.scss';    // user welcome
+@import './component/user/newicon/newicon.scss';    // user newicon
+@import './component/user/editActive/editActive.scss';    // edit active

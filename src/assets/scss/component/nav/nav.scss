@@ -7,4 +7,12 @@
     .ant-menu-horizontal > .ant-menu-item > a, .ant-menu-horizontal > .ant-menu-submenu > a{
         display:inline-block;
     }
+    .MoBik-nav__signOut{
+        position: absolute;
+        right: 5%;
+        top: 14px;
+        i{
+            font-size: 24px;
+        }
+    }
 }

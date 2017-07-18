@@ -1,19 +1,132 @@
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
 .activeDetail {
   max-width: 1200px;
   margin: auto;
   background-color: #fff;
   padding: 15px;
-  border: 1px dashed #eee; }
+  border: 1px dashed #eee;
+  text-align: center; }
   .activeDetail h1 {
-    font-size: 28px;
-    color: #1DA57A; }
+    font-size: 32px;
+    color: #79589F;
+    font-family: "BentonSans", "Helvetica Neue", sans-serif;
+    font-weight: normal;
+    margin: 30px 0 12px 0; }
   .activeDetail .iconDetail_user {
-    font-size: 12px;
-    color: #ccc;
-    padding: 5px 0; }
+    position: relative; }
+    .activeDetail .iconDetail_user p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0 8px 0 10px;
+      position: relative;
+      z-index: 2;
+      background: #fff; }
+      .activeDetail .iconDetail_user p span:nth-child(2) {
+        font-size: 14px;
+        color: #79589F; }
+    .activeDetail .iconDetail_user hr {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
   .activeDetail .iconDetail_content {
-    padding: 30px;
-    border-top: 1px dashed #eee;
-    border-bottom: 1px dashed #eee; }
+    padding: 80px 30px; }
   .activeDetail .iconDetail_message {
     margin: 0 auto; }
+
+.active-list {
+  position: relative; }
+  .active-list .active-list__leftBG {
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: -80px;
+    z-index: 1;
+    width: 300px;
+    height: 348px; }
+  .active-list .active-list__maskBG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    width: 50%;
+    margin: auto;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 8000px 200px white; }
+  .active-list .active-list__rightBG {
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    z-index: 1;
+    width: 300px;
+    height: 364px; }
+  .active-list .active-list__li {
+    position: relative;
+    z-index: 3;
+    padding: 0 6%;
+    background-color: #fff; }
+    .active-list .active-list__li:hover {
+      animation: activeListAnima 10s infinite linear; }
+    .active-list .active-list__li h1 {
+      font-size: 32px;
+      color: #79589F;
+      font-family: "BentonSans", "Helvetica Neue", sans-serif;
+      font-weight: normal;
+      margin: 30px 0 12px 0; }
+    .active-list .active-list__li .active-list__liuser p {
+      color: #96A3B6;
+      font-size: 12px;
+      font-weight: bold;
+      display: inline-block; }
+      .active-list .active-list__li .active-list__liuser p .active-list__liICO {
+        background-color: #AB8ECD;
+        color: #fff;
+        padding: 2px 5px;
+        border-radius: 5px;
+        margin-right: 5px; }
+    .active-list .active-list__li .active-list__licontent {
+      padding: 40px 2px;
+      color: rgba(89, 105, 129, 0.8);
+      font-size: 14px; }
+    .active-list .active-list__li .active-list__liBtn {
+      margin: 30px 0; }
+    .active-list .active-list__li hr {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      z-index: 1;
+      height: 1px;
+      border: 0;
+      background-image: linear-gradient(to right, rgba(207, 215, 230, 0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207, 215, 230, 0) 100%);
+      background-color: transparent;
+      max-width: 840px; }
+
+@keyframes activeListAnima {
+  0% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 0; }
+  100% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 1000px 0; } }

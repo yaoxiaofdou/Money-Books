@@ -14,7 +14,7 @@ class IList extends Component {
     render() {
         const listDataArr = ListService.getIcon().map((item,index)=>{
             return(
-                <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.id}>
+                <Col xs={24} sm={12} md={12} lg={8} xl={6} key={item.id} className="iconNav__li">
                     <Link to={`/home/icon/${item.id}`}>
                         <Card title={ item.title }
                                 extra={<b>{ item.time }</b>} 
@@ -27,7 +27,7 @@ class IList extends Component {
             )
         });
         return (
-            <Row>
+            <Row className="iconNav">
                 <QueueAnim delay={200}
                     style={{ padding: '0 30px' }}
                     >

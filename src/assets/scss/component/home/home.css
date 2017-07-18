@@ -1,7 +1,13 @@
-.homeNav-li {
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.04
+*    component all
+*    path /Users/apple/react/Money-Books/src/assets/scss/variable.scss
+*************************************/
+.homeNav-panel .homeNav-li {
   width: 250px;
   height: 250px;
-  background-color: #fff;
   transition: 0.5s;
   text-align: center;
   position: relative;
@@ -9,10 +15,27 @@
   right: 0;
   bottom: 0;
   left: 0;
-  margin: 0 auto 20px; }
-  .homeNav-li i {
+  margin: 0 auto 20px;
+  box-shadow: 1px 1px 9px -3px #AB8ECD; }
+  .homeNav-panel .homeNav-li i {
     display: inline-block;
     line-height: 250px;
-    font-size: 16px; }
-  .homeNav-li:hover {
-    box-shadow: -4px 4px 20px -6px #777; }
+    font-size: 24px; }
+  .homeNav-panel .homeNav-li:hover {
+    animation: homeNavAnima 10s infinite linear; }
+
+@keyframes homeNavAnima {
+  0% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 0; }
+  100% {
+    background: linear-gradient(45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(-45deg, rgba(242, 238, 255, 0.6) 25%, transparent 25%, transparent), linear-gradient(45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%), linear-gradient(-45deg, transparent 75%, rgba(242, 238, 255, 0.6) 75%);
+    background-size: 42px 45px;
+    background-position: 0 1000px; } }
+
+.welcome {
+  padding: 50px 30px; }
+  .welcome h2 {
+    font-size: 24px;
+    line-height: 80px; }

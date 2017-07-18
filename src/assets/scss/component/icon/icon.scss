@@ -1,20 +1,48 @@
+@import '../../variable.scss';                    // 变量
+
 .iconDetail{
-    background-color:#fff;
     padding: 15px;
-    border: 1px dashed #eee;
+    text-align: center;
     h1{
-        font-size: 28px;
-        color:#1DA57A;
+        font-size: $max-max-max-size;
+        color:$a-color;
+        font-family: "BentonSans", "Helvetica Neue", sans-serif;
+        font-weight: normal;
+        margin:30px 0 12px 0;
     }
     .iconDetail_user{
-        font-size: 12px;
-        color: #ccc;
-        padding:5px 0;
+        position: relative;
+        p{
+            color: #96A3B6;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            padding: 0 8px 0 10px;
+            position: relative;
+            z-index: 2;
+            background: #fff;
+            span:nth-child(2){
+                font-size:14px;
+                color: #79589F;
+            }
+        }
+        hr{
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 1;
+            height:1px;
+            border:0;
+            background-image: linear-gradient(to right, rgba(207,215,230,0) 0%, #CFD7E6 10%, #CFD7E6 90%, rgba(207,215,230,0) 100%);
+            background-color: transparent;
+            max-width: 840px;
+        }
     }
     .iconDetail__content{
-        padding: 30px;
-        border-top: 1px dashed #eee;
-        border-bottom: 1px dashed #eee;
+        padding: 20px 30px 100px 30px;
+        color: rgba(89,105,129,0.8);
     }
 }
 .IListDetail_Icon{
@@ -24,6 +52,48 @@
         text-align: center;
         i{
             font-size:50px;
+        }
+    }
+}
+.iconNav{
+    padding: 30px 0;
+    .iconNav__li{
+        text-align: center;
+        .ant-card{
+            display:inline-block;
+            width: 300px;
+            height:132px;
+            background: #F9F9FB;
+            box-shadow: 6px 6px 20px 2px #eee;
+            .ant-card-head-title{
+                color:$a-color;
+            }
+            .ant-card-body{
+                p{
+                    text-align: left;
+                    overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            &:hover{
+                box-shadow:4px 4px 15px 2px $a-color;;
+                animation:msgAnima 20s infinite linear;
+            }
+        }
+    }
+    @keyframes msgAnima{
+        0%{
+            background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+            background-size: 30px 30px;
+            background-position:0 100px; 
+        }
+        100%{
+            background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+            background-size: 30px 30px;
+            background-position:0 1000px;
         }
     }
 }

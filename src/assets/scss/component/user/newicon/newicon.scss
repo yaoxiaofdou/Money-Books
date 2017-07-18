@@ -1,0 +1,146 @@
+@import '../../../variable.scss';                    // 变量
+
+/*************************************
+*    create by xiaofeng.yao
+*    email 871213171@qq.com
+*    time 2017.07.08
+*    component newicon
+*    path /Users/apple/react/Money-Books/src/assets/scss/component/user/newicon/newicon.scss
+*************************************/
+.NewIcon_div{
+    max-width: 500px;
+    text-align: center;
+    padding: 0 0 100px 0;
+
+    .NewIcon_class{
+        display: inline-block;
+        width: 180px;
+        margin-right: 40px;
+        height: 90px;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+
+        .NewIcon_class_mul{
+            padding-top: 10px;
+            width: 100%;
+            height:106px;
+            position: relative;
+            transition:0.4s;
+            .NewIcon_class__select{
+                .iconfont{
+                    position:relative;
+                    font-size: 34px;
+                    top: 6px;
+                }
+                .ant-select{
+                    width: 140px;
+                }
+            }
+            .NewIcon_class__newclass{
+                margin-top: 40px;
+                .iconfont{
+                    position:relative;
+                    font-size: 32px;
+                    top: 6px;
+                }
+                .ant-input{
+                    width: 140px;
+                }
+                .ant-btn{
+                    margin-top:20px;
+                }
+            }
+        }
+        .NewIcon_class_mul--new{
+            transform: translateY(-90px);
+        }
+    }
+    
+    .NewIcon_section{
+        margin: 15px 0;
+        padding: 15px 5px;
+        box-shadow: 0px 0px 4px 1px #69489c;
+        display: inline-block;
+        margin-bottom: 40px;
+        text-align: center;
+
+        .NewIcon{
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+            overflow: hidden;
+            animation:userNewIconAnima 10s infinite linear;
+            position: relative;
+            .icon-shangchuan1{
+                height: 40px;
+                font-size: 130px;
+                position: absolute;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                margin:auto;
+            }
+
+            .NewIcon__File{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                opacity:0;
+                cursor: pointer;
+            }
+            .NewIcon__Img{
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #fff;
+            }
+            .NewIcon__Img--hide{
+                opacity:0;
+            }
+            &:hover{
+                .icon-shangchuan1{
+                    color:$a-color;
+                }
+            }
+        }
+        .NewIcon__title{
+            width: 170px;
+            height: 30px;
+            position: relative;
+            .NewIcon__title-txt{
+                border:none;
+                outline:none;
+                width: 100%;
+                height:100%;
+                text-align: center;
+                background-color: transparent;
+                &:focus{
+                    outline:1px solid $a-color;
+                }
+            }
+        }
+        @keyframes userNewIconAnima{
+            0%{
+                background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+                background-size: 30px 30px;
+                background-position:0 100px; 
+            }
+            100%{
+                background: linear-gradient(-45deg, #fff 25%, rgba(114, 76, 165,0.2) 0, rgba(114, 76, 165,0.2) 50%, #fff 0, #fff 75%, rgba(114, 76, 165,0.2) 0);
+                background-size: 30px 30px;
+                background-position:0 1000px;
+            }
+        }
+    }
+    .ant-form-item-control{
+        
+    }
+}
