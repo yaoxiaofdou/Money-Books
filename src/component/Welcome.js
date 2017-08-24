@@ -10,6 +10,11 @@ class WelcomeView extends Component {
     render() {
         return (
             <QueueAnim type="bottom" delay={200} className="welcome">
+<<<<<<< HEAD
+=======
+                <h1>test</h1>
+                <h1>wocao</h1>
+>>>>>>> test
                 <h2 key="a0">Welcome to My Honey Demo, "Money Books"! </h2>
                 <Steps direction="vertical" size="small" current={0} key="a1">
                     <Step title="浏览" description="你可以浏览这里的所有帖子！"  />
