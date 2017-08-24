@@ -1,4 +1,3 @@
-// test fenzhi 
 import $ from 'jquery';
 
 const uploadUrl = 'http://220.160.111.78:59459/file/upload/fileupload.do';
